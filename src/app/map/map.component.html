@@ -1,0 +1,11 @@
+<ng-container *ngIf="googleMapsApiKey">
+  <google-map
+    height="500px"
+    width="100%"
+    [center]="center"
+    [zoom]="zoom"
+    [options]="options"
+  >
+    <map-marker [position]="{ lat: center.lat, lng: center.lng }"></map-marker>
+  </google-map>
+</ng-container>
