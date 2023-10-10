@@ -29,6 +29,8 @@ export class MapComponent implements OnInit {
   }
 
   ngOnInit() {
+    const location = window.location;
+    console.log('location', location);
     navigator.geolocation.getCurrentPosition((position) => {
       this.center = {
         lat: position.coords.latitude,
